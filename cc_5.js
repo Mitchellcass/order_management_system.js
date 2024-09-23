@@ -60,3 +60,22 @@ function calculateOrderTotal(order) {
 // Example total
 const total = calculateOrderTotal(orders[0]); // Get the total for the first order
 console.log(`Total: $${total}`);
+
+
+// Task 5: Create a Function to Mark an Order as Completed
+function completeOrder(customerName) {
+    const order = orders.find(o => o.customerName === customerName);
+
+    if (!order) {
+        console.log(`Error: No order found for ${customerName}.`);
+        return;
+    }
+
+    order.status = 'Completed';
+    console.log(`Order for ${customerName} is completed`);
+}
+
+// Example completed order
+placeOrder('Jim', [{ name: 'Frappuccino', quantity: 1 }]);
+completeOrder('Jim'); 
+

@@ -79,3 +79,13 @@ function completeOrder(customerName) {
 placeOrder('Jim', [{ name: 'Frappuccino', quantity: 1 }]);
 completeOrder('Jim'); 
 
+
+// Task 6: Create a Function to Check Pending Orders
+function checkPendingOrders() {
+    orders.forEach(order => {
+    if (order.status === 'Pending') {
+console.log(`Pending order for ${order.customerName}:`, order.items)
+}})};
+
+// Test pending orders
+checkPendingOrders()
